@@ -1,0 +1,23 @@
+{
+	"name": "outputData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adf2adls_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "tar",
+				"fileSystem": "kanak"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
