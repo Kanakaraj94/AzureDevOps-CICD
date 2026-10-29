@@ -57,9 +57,10 @@ stages:
         csmParametersFile: "$(Build.SourcesDirectory)/ARMTemplateParametersForFactory.json"
 
         overrideParameters: >
-          -factoryName "denispadfuat"
-          -adls2adf_ls_accountKey "$(uat_adls_account_key)"
-          -adls2adf_ls_properties_typeProperties_url "https://denispadlsuat.dfs.core.windows.net/"
+          -factoryName "kanakdf-uat"
+          -adf2adls_ls_accountKey "$(uat_adls_account_key)"
+          -adf2adls_ls_properties_typeProperties_url "https://kanakadlsuat.dfs.core.windows.net/"
+
 
 
         deploymentMode: Incremental
@@ -94,8 +95,8 @@ stages:
         csmParametersFile: "$(Build.SourcesDirectory)/ARMTemplateParametersForFactory.json"
 
         overrideParameters: >
-          -factoryName "denispadfprod"
-          -adls2adf_ls_accountKey "$(prod_adls_account_key)"
-          -adls2adf_ls_properties_typeProperties_url "https://denispadlsprod.dfs.core.windows.net/"
+          -factoryName "kanakdf-prod"
+          -adf2adls_ls_accountKey "$(prod_adls_account_key)"
+          -adf2adls_ls_properties_typeProperties_url "https://kanakadlsprod.dfs.core.windows.net/"
 
         deploymentMode: Incremental
