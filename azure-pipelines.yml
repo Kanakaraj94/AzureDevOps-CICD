@@ -45,9 +45,9 @@ stages:
     - task: AzureResourceGroupDeployment@2
       displayName: "Deploy ARM Template to UAT Data Factory"
       inputs:
-        azureSubscription: "DEVUATPRODConn"
+        azureSubscription: "DEVUATPRODConn1"
         action: "Create Or Update Resource Group"
-        resourceGroupName: "mde-mar-rg"
+        resourceGroupName: "AzureDevOps_rg"
         location: "East US"
 
         templateLocation: "Linked artifact"
@@ -82,9 +82,9 @@ stages:
     - task: AzureResourceGroupDeployment@2
       displayName: "Deploy ARM Template to PROD Data Factory"
       inputs:
-        azureSubscription: "DEVUATPRODConn"
+        azureSubscription: "DEVUATPRODConn1"
         action: "Create Or Update Resource Group"
-        resourceGroupName: "mde-mar-rg"
+        resourceGroupName: "AzureDevOps_rg"
         location: "East US"
 
         templateLocation: "Linked artifact"
